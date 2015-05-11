@@ -46,14 +46,14 @@
         [transitionContext.containerView addSubview:animatedViewForTransition];
         
         animatedViewForTransition.clipsToBounds = YES;
-        animatedViewForTransition.layer.cornerRadius = CGRectGetHeight(animatedViewForTransition.frame) / 2.;
+        animatedViewForTransition.layer.cornerRadius = 0;
         animatedViewForTransition.backgroundColor = self.startBackgroundColor;
     }
     
     CGAffineTransform finalTransform;
     {
         CGFloat size = MAX(CGRectGetHeight(transitionContext.containerView.frame), CGRectGetWidth(transitionContext.containerView.frame)) * 1.2;
-        CGFloat scaleFactor = size / CGRectGetWidth(animatedViewForTransition.frame);
+        CGFloat scaleFactor = size / CGRectGetHeight(animatedViewForTransition.frame);
         finalTransform = CGAffineTransformMakeScale(scaleFactor, scaleFactor);
     }
     

@@ -24,9 +24,9 @@
 
 - (void)createCloseButton
 {
-    CGFloat y = 300;
-    CGFloat width = 50;
-    CGFloat height = width;
+    CGFloat y = 50;
+    CGFloat width = CGRectGetWidth(self.view.frame);
+    CGFloat height = 100;
     CGFloat x = (320 - width) / 2.;
     
     UIButton *closeButton = [[UIButton alloc] initWithFrame:CGRectMake(x, y, width, height)];

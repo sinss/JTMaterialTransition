@@ -30,13 +30,13 @@
 
 - (void)createPresentControllerButton
 {
-    CGFloat y = 300;
-    CGFloat width = 50;
-    CGFloat height = width;
+    CGFloat y = 50;
+    CGFloat width = CGRectGetWidth(self.view.frame);
+    CGFloat height = 100;
     CGFloat x = (CGRectGetWidth(self.view.frame) - width) / 2.;
     
     self.presentControllerButton = [[UIButton alloc] initWithFrame:CGRectMake(x, y, width, height)];
-    self.presentControllerButton.layer.cornerRadius = width / 2.;
+    //self.presentControllerButton.layer.cornerRadius = width / 2.;
     self.presentControllerButton.backgroundColor = [UIColor colorWithRed:86./256. green:188./256. blue:138./256. alpha:1.];
     
     [self.presentControllerButton setImage:[UIImage imageNamed:@"plus"] forState:UIControlStateNormal];
